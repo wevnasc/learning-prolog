@@ -44,8 +44,8 @@ tio(X, Y) :-
 prima(X, Y) :-
     progenitor(Z1, X),
     progenitor(Z2, Y),
-    progenitor(Z, z1),
-    progenitor(Z, z2),
+    progenitor(Z, Z1),
+    progenitor(Z, Z2),
     feminino(X).
     
 descendente(X, Z) :-
