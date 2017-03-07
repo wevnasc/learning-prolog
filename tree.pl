@@ -26,7 +26,7 @@ mãe(X, Y) :-
     progenitor(X, Y),
     feminino(X).
 
-avô(X, Z) :
+avô(X, Z) :-
     progenitor(X, Y),
     progenitor(Y, Z).
 
@@ -36,7 +36,7 @@ irmã(X, Y) :-
     feminino(X),
     dif(X, Y).
 
-tio(X, Y) :
+tio(X, Y) :-
     progenitor(Z, Y),
     progenitor(H, Z),
     progenitor(H, X).
@@ -48,9 +48,9 @@ prima(X, Y) :-
     progenitor(Z, z2),
     feminino(X).
     
-antepassado(X, Z) :-
+descendente(X, Z) :-
     progenitor(X, Z).
 
-antepassado(X, Z) :- 
+descendente(X, Z) :- 
     progenitor(X, Y),
     antepassado(Y, Z).
